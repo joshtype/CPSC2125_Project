@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: white;
+}
+body {
+  background-image: url(imgs/turq-bg.jpg);
+  background-size: 100%;
+}
+header, nav, main, footer, section { 
+  border: 1px solid salmon; 
+}
+
+a { color: salmon; }
+
+
+/* GRID AREA NAMES */
+.header-card { grid-area: header; }
+.nav-card { grid-area: nav; }
+.main-card { grid-area: main; }
+.right-margin { grid-area: right; }
+.footer-card { grid-area: footer; }
+
+/* GRID LAYOUT */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header'
+    'nav main main main main'
+    'nav main main main main'
+    'footer footer footer footer footer';
+  column-gap: 1em;
+  row-gap: 1em;
+}
+.header-card {
+  color: white;
+  background-image: url(imgs/citylights.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+.footer-card {
+  background-image: url(imgs/turq-wood-bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
