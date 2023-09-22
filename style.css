@@ -2,18 +2,19 @@ html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
-  font-weight: 700;
-  color: white;
+  font-weight: 500;
+  color: floralwhite;
 }
 body {
   background-image: url(imgs/turq-bg.jpg);
   background-size: 100%;
 }
-header, nav, main, footer, section { 
-  border: 1px solid salmon; 
-}
 
+/* GLOBAL: BORDERS, LINKS, BUTTONS STYLES */
+header, nav, main, footer { border: 1px solid salmon; }
 a { color: salmon; }
+a:hover { color: turquoise; }
+button { margin: 1em; }
 
 
 /* GRID AREA NAMES */
@@ -34,6 +35,8 @@ a { color: salmon; }
   column-gap: 1em;
   row-gap: 1em;
 }
+
+/* GLOBAL: HEADER STYLES */
 .header-card {
   color: white;
   background-image: url(imgs/citylights.jpg);
@@ -41,8 +44,31 @@ a { color: salmon; }
   background-repeat: no-repeat;
   background-position-y: 50%;
 }
+
+/* GLOBAL: FOOTER STYLES */
 .footer-card {
-  background-image: url(imgs/turq-wood-bg.jpg);
+  background-color: teal;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+/* GLOBAL: MAIN & NAV STYLES */
+.main-card {
+  background-color: teal;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.nav-card {
+  background-color: teal;
+}
+/* page1: LIST STYLES */
+.outline-level1 { list-style-type: upper-roman; }
+.outline-level2 { list-style-type: lower-roman; }
+
+/* page2: TABLE STYLES */
+table, th, td {
+  border: 1px solid white;
+  padding: 1em;
 }

@@ -17,32 +17,64 @@
       </header>
 
       <nav class="nav-card" id="page2-nav-card">
-        <button class="nav-btn"><a href src="index.html">Home</a></button><br>
-        <button class="nav-btn"><a href src="page1.html">Page 1</a></button><br>
-        <button class="nav-btn"><a href src="page2.html">Page 2</a></button><br>
-        <button class="nav-btn"><a href src="www.columbusstate.edu">CSU</a>
-          </button><br>
+        <center>
+          <button class="nav-btn"><a href="index.html">Home</a></button><br>
+          <button class="nav-btn"><a href="page1.html">Page 1</a></button><br>
+          <button class="nav-btn"><a href="page2.html">Page 2</a></button><br>
+          <button class="nav-btn"><a href="www.columbusstate.edu">CSU</a><br>
+          </button>
+        </center>
       </nav>
 
       <main class="main-card" id="page2-main-card">
-        Main
+        <table id="page2-table">
+          <th colspan=2>A few things I've learned:</th>
+          <tr id="col-titles">
+            <th id="left-title">HTML ELEMENTS</th>
+            <th id="right-title">HTML ATTRIBUTES</th>
+          </tr>
+          <tr id="col-cells">
+            <td id="left-col">
+              <ul id="element-list">
+                <li>&lt;video&gt;</li>
+                <li>&lt;track&gt;</li>
+                <li>&lt;object&gt;</li>
+                <li>&lt;iframe&gt;</li>
+                <li>&lt;th&gt;</li>
+              </ul>
+            </td>
+            <td id="right-col">
+              <ul id="attribute-list">
+                <li>poster, autoplay</li>
+                <li>kind, srclang</li>
+                <li>data, type</li>
+                <li>width, height</li>
+                <li>colspan, rowspan</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
       </main>
 
       <footer class="footer-card" id="page2-footer-card">
-        Cyclopes AI Consulting:<br>
-        <small id="copy-contact">
-          <button class="nav-btn" id="gh-btn">
-            <a href src="https://github.com/joshtype">GitHub</a>
-          </button>
-          <br>gregory_joshua2@students.columbusstate.edu
-          <br>912-286-6548
-          <br>&copy;2023 Joshua Gregory.
-          <br>Background images made using StarryAI.com.
-        </small>
-      </footer>
-    </div> <!-- close grid -->
+        <p class="biz-name">
+        Cyclopes AI Consulting<br>
+      </p>
+      <p class="contact">
+        <button class="nav-btn" id="gh-btn">
+          <a href="https://github.com/joshtype">GitHub</a>
+        </button>
+        912-286-6548<br>
+        gregory_joshua2@students.columbusstate.edu
+      </p>
+      <small class="copyright">
+        &copy;2023 Joshua Gregory.<br>
+        Background images made using StarryAI.com.<br><br>
+      </small>
+    </footer>
+  </div> <!-- close grid -->
 
-    <!-- JS SCRIPTS -->
+  <!-- JS SCRIPTS -->
     <script src="script.js"></script>
     <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
       position="bottom-right"></script>
