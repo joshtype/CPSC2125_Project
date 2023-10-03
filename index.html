@@ -1,57 +1,99 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Project 1: HTML, CSS, GH
+-->
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Index</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Index</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body id="idx-body">
+    <div class="grid-container" id="idx-grid-container">
 
-<body id="idx-body">
-  <div class="grid-container" id="idx-grid-container">
+      <!-- HEADER CARD: TOP ROW, ALL COLS -->
+      <header class="header-card" id="idx-header">
+        <center>
+          <h1>Project Site: Home</h1>
+        </center>
+      </header>
 
-    <header class="header-card" id="idx-header">
-      <center>
-        <h2>Project Site: Home</h2>
-      </center>
-    </header>
+      <!-- NAV CARD: MIDDLE ROW, LEFT COL -->
+      <nav class="nav-card" id="idx-nav">
+        <center>
+          <table class="nav-tbl" width=100% height=100%>
+            
+            <!-- row 0 -->
+            <tr class="nav-tbl-row0">Menu</tr>
+            
+            <!-- row 1 -->
+            <tr class="nav-tbl-row1">
+              <td>
+                <center><a href="index.html">Home</a></center>
+              </td>
+            </tr>
 
-    <nav class="nav-card" id="idx-nav">
-      <center>
-        <button class="nav-btn"><a href="index.html">Home</a></button><br>
-        <button class="nav-btn"><a href="page1.html">Page 1</a></button><br>
-        <button class="nav-btn"><a href="page2.html">Page 2</a></button><br>
-        <button class="nav-btn"><a href="www.columbusstate.edu">CSU</a><br>
-        </button>
-      </center>
-    </nav>
+            <!-- row 2 -->
+            <tr class="nav-tbl-row2">
+              <td>
+                <center><a href="page1.html">Page 1</a></center>
+              </td>
+            </tr>
+            
+            <!-- row 3 -->
+            <tr class="nav-tbl-row3">
+              <td>
+                <center><a href="page2.html">Page 2</a></center>
+              </td>
+            </tr>
 
-    <main class="main-card" id="idx-main">
-      <h2>Welcome!</h2>
-      <h5>Thank you for visiting my project site!</h5>
-    </main>
+            <!-- row 4 -->
+            <tr>
+              <td>
+                <center><a href="https://www.columbusstate.edu">CSU</a></center>
+              </td>
+            </tr>
+          
+         </table>
+        </center>
+      </nav>
 
-    <footer class="footer-card" id="idx-footer">
-      <p class="biz-name">
-        Cyclopes AI Consulting<br>
-      </p>
-      <p class="contact">
-        <button class="nav-btn" id="gh-btn">
-          <a href="https://github.com/joshtype">GitHub</a>
-        </button>
-        912-286-6548<br>
-        gregory_joshua2@students.columbusstate.edu
-      </p>
-      <small class="copyright">
-        &copy;2023 Joshua Gregory.<br>
-        Background images made using StarryAI.com.<br><br>
-      </small>
-    </footer>
-  </div> <!-- close grid -->
+      <!-- MAIN CARD: MIDDLE ROW, RIGHT COL -->
+      <main class="main-card" id="idx-main">
+        <h2>Welcome!</h2>
+        <h5>My name is Joshua Gregory.</h5>
+        <p>Thank you for visiting my project site!</p>
+      </main>
+
+      <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
+      <footer class="footer-card" id="idx-footer">
+        <p class="biz-name">
+          Cyclopes AI Consulting<br>
+        </p>
+        
+        <p class="contact">
+          <button class="nav-btn" id="gh-btn">
+            <a href="https://github.com/joshtype">GitHub</a>
+          </button>
+          912-286-6548<br>
+          gregory_joshua2@students.columbusstate.edu
+        </p>
+        
+        <small class="copyright">
+          &copy;2023 Joshua Gregory.<br>
+          Background images made using StarryAI.com.<br><br>
+        </small>
+      </footer>
+    </div> <!-- close grid -->
 
     <!-- JS SCRIPTS -->
     <script src="script.js"></script>
-    <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark"         position="bottom-right"></script>
+    <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark"
+      position="bottom-right"></script>
   </body>
 </html>

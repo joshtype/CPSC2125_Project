@@ -1,21 +1,23 @@
+/*
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Project Site CSS File
+*/
 html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
-  font-weight: 500;
-  color: floralwhite;
+  font-weight: 700;
+  color: black;
 }
 body {
-  background-image: url(imgs/turq-bg.jpg);
+  background-color: teal;
+  background-image: url(imgs/cardboard-city.png);
   background-size: 100%;
+  background-position-y: center;
+  background-repeat: no-repeat;
 }
-
-/* GLOBAL: BORDERS, LINKS, BUTTONS STYLES */
-header, nav, main, footer { border: 1px solid salmon; }
-a { color: salmon; }
-a:hover { color: turquoise; }
-button { margin: 1em; }
-
 
 /* GRID AREA NAMES */
 .header-card { grid-area: header; }
@@ -30,45 +32,89 @@ button { margin: 1em; }
   grid-template-areas: 
     'header header header header header'
     'nav main main main main'
-    'nav main main main main'
-    'footer footer footer footer footer';
+    'nav footer footer footer footer';
   column-gap: 1em;
   row-gap: 1em;
+}
+
+/* GLOBAL: BORDERS, TEXT, BG-COLORS */
+header, main, footer { border: 1px solid salmon; }
+main, footer { background-color: rgba(175, 238, 238, .4); }
+h2, h5, p, ol, ul, li { color: black; }
+h1 { color: white; padding: 1.5em; }
+
+/* GLOBAL: BUTTONS & LINKS */
+button:hover { background-color: salmon; }
+button { 
+  border: 1px solid black; 
+  border-radius: 15%;
+  padding-top: .25em; 
+  padding-bottom: .25em;
+}
+a { 
+  color: black; 
+  text-decoration: underline overline;
+}
+a:hover { 
+  color: turquoise; 
+  text-decoration-color: yellow;
 }
 
 /* GLOBAL: HEADER STYLES */
 .header-card {
   color: white;
-  background-image: url(imgs/citylights.jpg);
+  background-image: url(imgs/greenwool.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 50%;
 }
 
-/* GLOBAL: FOOTER STYLES */
-.footer-card {
-  background-color: teal;
-  background-size: 100%;
-  background-repeat: no-repeat;
+/* GLOBAL: NAV TBL STYLES */
+td:hover { background-color: salmon; }
+.nav-tbl {
+  border-collapse: collapse;
+  background-color: rgba(175, 238, 238, .4);
+}
+table, th, td {
+  border: 1px solid white;
+  padding: 1em;
 }
 
 /* GLOBAL: MAIN & NAV STYLES */
 .main-card {
-  background-color: teal;
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
 }
-.nav-card {
-  background-color: teal;
-}
-/* page1: LIST STYLES */
-.outline-level1 { list-style-type: upper-roman; }
-.outline-level2 { list-style-type: lower-roman; }
 
-/* page2: TABLE STYLES */
-table, th, td {
-  border: 1px solid white;
-  padding: 1em;
+/* page1.html: LIST STYLES */
+.li-topic {  
+  list-style-type: upper-roman;
+  background-color: rgb(173,255,47);
 }
+.li-items { 
+  background-color: rgb(152,251,152); 
+  list-style-type: lower-roman;
+}
+
+/* page2.html: TABLE STYLES */
+.page2-table {
+  font-family: serif;
+  
+}
+#page2-tbl-head {
+  background-color: black;
+  color: white;
+  font-family: serif;
+  font-size: 1.5em;
+}
+#col-cells, #col-titles {
+  background-color: rgb(173, 255, 47);
+  color: blue;
+  font-family: serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+#attribute-list > *, #element-list > * { color: salmon; }
+#left-col:hover, #right-col:hover { background-color: rgb(173, 255, 47); }
