@@ -1,0 +1,166 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Project 1: HTML, CSS, GH
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Page 3</title>
+    <link rel="icon" href="imgs/icons/icon.png" 
+      type="image/icon type">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="page2-body">
+    <div class="grid-container" id="page2-grid-container">
+
+      <!-- HEADER CARD: TOP ROW, ALL COLS -->
+      <header class="header-card" id="page2-header-card">
+        <center>
+          <h1>Project Site: Page 3</h1>
+        </center>
+      </header>
+
+      <!-- NAV CARD: MIDDLE ROW, LEFT COL -->
+      <nav class="nav-card" id="idx-nav">
+        <center>
+          <table class="nav-tbl" width=100% height=100%>
+            <!-- row 0 -->
+            <tr class="nav-tbl-row0">Menu</tr>
+            <!-- row 1 -->
+            <tr class="nav-tbl-row1">
+              <td>
+                <center><a href="index.html">Home</a></center>
+              </td>
+            </tr>
+            <!-- row 2 -->
+            <tr class="nav-tbl-row2">
+              <td>
+                <center><a href="page1.html">Page 1</a></center>
+              </td>
+            </tr>
+            <!-- row 3 -->
+            <tr class="nav-tbl-row3">
+              <td>
+                <center><a href="page2.html">Page 2</a></center>
+              </td>
+            </tr>
+            <!-- row 4 -->
+            <tr class="nav-tbl-row3">
+              <td>
+                <center><a href="page3.html">Page 3</a></center>
+              </td>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+              <td>
+                <center><a href="https://www.columbusstate.edu">CSU</a></center>
+              </td>
+            </tr>
+         </table>
+        </center>
+      </nav>
+
+      <!-- MAIN CARD: MIDDLE ROW, RIGHT COL -->
+      <main class="main-card" id="page2-main-card">
+        <!-- form submit calls validation function; opens in new window -->
+        <form action="https://webdevbasics.net/scripts/yoga.php" name="reg-form" 
+          id="reg-form" onsubmit="validateUserPass()" method="post"
+            target="_blank">
+          <ul id="form-ul">
+            Please fill out the form below to register (*required):
+            <br><br>
+            
+            <li class="form-li">
+              <fieldset id="basic-info">
+                <legend>Personal Information:</legend>
+                <br>
+                
+                <label for="fname">First Name*</label><br>
+                <input type="text" name="fname" id="fname" placeholder="50 max chars" 
+                  maxlength="50" required />
+                <br><br>
+                
+                <label for="l">Last Name*</label><br>
+                <input type="text" name="lname" id="lname" placeholder="50 max chars" 
+                  maxlength="50" required />
+                <br><br>
+                
+                <label for="birthyear">Year of Birth*</label><br>
+                <input type="birthyear" id="birthyear" placeholder="yyyy" min="1900"
+                  max="2023" required />
+                <br><br>
+                
+                <label for="phone">Telephone*</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="###-###-####"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <br><br>
+              </fieldset>
+            </li>
+
+            <li class="form-li">
+              <fieldset id="account-info">
+                <legend>Account Information:</legend>
+                <br>
+                
+                <label for="mail">Email*</label><br>
+                <input type="email" name="mail" id="mail" placeholder="you@site.com" 
+                  required />
+                <br><br>
+                
+                <lable for="username-input">Username*</label><br>
+                <input type="text" name="user" id="user" placeholder="5 - 10 chars"
+                  minlength="5" maxlength="10" required />
+                <br><br>
+                  
+                <label for="pass1">Password*</label><br>
+                <input type="password" name="pass1" id="pass1" placeholder="******" 
+                  required />
+                <br><br>
+                
+                <label for="pass2">Confirm Password*</label><br>
+                <input type="password" name="pass2" id="pass2" placeholder="******"
+                  required />
+                <br><br>
+              </fieldset>
+            </li>
+            
+            <br>
+            <li class="form-li">
+              <input type="submit" name="submit" id="submit" value="Submit" />
+              <input type="reset" name="reset" id="reset" value="Reset" />
+            </li>
+            
+          </ul>
+        </form>
+      </main>
+
+      <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
+      <footer class="footer-card" id="page2-footer-card">
+        <p class="biz-name">
+        Cyclopes AI Consulting<br>
+        </p>
+        <p class="contact">
+          <button class="nav-btn" id="gh-btn">
+            <a href="https://github.com/joshtype">GitHub</a>
+          </button>
+          912-286-6548<br>
+          gregory_joshua2@students.columbusstate.edu
+      </p>
+      <small class="copyright">
+          &copy;2023 Joshua Gregory.<br>
+          Background images made using StarryAI.com.<br><br>
+      </small>
+    </footer>
+  </div> <!-- close grid -->
+
+  <!-- JS SCRIPTS -->
+    <script src="script.js"></script>
+    <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
+      position="bottom-right"></script>
+  </body>
+</html>

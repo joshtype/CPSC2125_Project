@@ -99,10 +99,7 @@ table, th, td {
 }
 
 /* page2.html: TABLE STYLES */
-.page2-table {
-  font-family: serif;
-  
-}
+.page2-table { font-family: serif; }
 #page2-tbl-head {
   background-color: black;
   color: white;
@@ -118,3 +115,18 @@ table, th, td {
 }
 #attribute-list > *, #element-list > * { color: salmon; }
 #left-col:hover, #right-col:hover { background-color: rgb(173, 255, 47); }
+
+/* page3.html Styles */
+.form-li { list-style: none; }
+#submit, #reset {
+  color: white;
+  background-color: teal;
+  width: 75px;
+  height: 35px;
+}
+#submit:hover, #reset:hover {
+  color: white;
+  background-color: teal;
+  text-decoration: underline;
+  cursor: pointer;
+}
