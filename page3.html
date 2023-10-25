@@ -2,17 +2,20 @@
   Joshua Gregory
   Professor Montgomery
   Internet Programming
-  Project 1: HTML, CSS, GH
+  Project Site HTML
 -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    
     <title>Page 3</title>
     <link rel="icon" href="imgs/icons/icon.png" 
       type="image/icon type">
+    
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script2.js"></script>
   </head>
 
   <body id="page2-body">
@@ -67,72 +70,72 @@
 
       <!-- MAIN CARD: MIDDLE ROW, RIGHT COL -->
       <main class="main-card" id="page2-main-card">
+        
         <!-- form submit calls validation function; opens in new window -->
-        <form action="https://webdevbasics.net/scripts/yoga.php" name="reg-form" 
-          id="reg-form" onsubmit="validateUserPass()" method="post"
-            target="_blank">
+        <form action="https://webdevbasics.net/scripts/yoga.php" id="p3-form" 
+          method="post" target="_blank">  
           <ul id="form-ul">
             Please fill out the form below to register (*required):
-            <br><br>
             
+            <br><br>
             <li class="form-li">
               <fieldset id="basic-info">
                 <legend>Personal Information:</legend>
+                
                 <br>
-                
                 <label for="fname">First Name*</label><br>
-                <input type="text" name="fname" id="fname" placeholder="50 max chars" 
-                  maxlength="50" required />
-                <br><br>
+                <input type="text" id="fname" minlength="1" 
+                  maxlength="50" placeholder="1 - 50 characters" required />
                 
-                <label for="l">Last Name*</label><br>
-                <input type="text" name="lname" id="lname" placeholder="50 max chars" 
-                  maxlength="50" required />
                 <br><br>
+                <label for="lname">Last Name*</label><br>
+                <input type="text" id="lname" minlength="1" maxlength="50"
+                  placeholder="1 - 50 characters" required />
                 
+                <br><br>
                 <label for="birthyear">Year of Birth*</label><br>
-                <input type="birthyear" id="birthyear" placeholder="yyyy" min="1900"
-                  max="2023" required />
-                <br><br>
+                <input type="birthyear" id="birthyear" min="1900" max="2023" 
+                  placeholder="yyyy" required />
                 
+                <br><br> 
                 <label for="phone">Telephone*</label><br>
-                <input type="tel" name="phone" id="phone" placeholder="###-###-####"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-                <br><br>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="###-###-####" required />
               </fieldset>
             </li>
 
+            <br><br>
             <li class="form-li">
               <fieldset id="account-info">
                 <legend>Account Information:</legend>
+                
                 <br>
-                
                 <label for="mail">Email*</label><br>
-                <input type="email" name="mail" id="mail" placeholder="you@site.com" 
-                  required />
-                <br><br>
+                <input type="email" id="mail" placeholder="you@site.com" required />
                 
-                <lable for="username-input">Username*</label><br>
-                <input type="text" name="user" id="user" placeholder="5 - 10 chars"
-                  minlength="5" maxlength="10" required />
                 <br><br>
+                <lable for="user-input">Username*</label><br>
+                <input type="text" id="user" minlength="5" maxlength="10"
+                  placeholder="5 - 10 chars" required />
                   
+                <br><br>
                 <label for="pass1">Password*</label><br>
-                <input type="password" name="pass1" id="pass1" placeholder="******" 
+                <input type="password" id="pass1" placeholder="********" 
                   required />
+                  
                 <br><br>
-                
                 <label for="pass2">Confirm Password*</label><br>
-                <input type="password" name="pass2" id="pass2" placeholder="******"
+                <input type="password" id="pass2" placeholder="********"
                   required />
-                <br><br>
               </fieldset>
             </li>
             
-            <br>
+            <br><br>
             <li class="form-li">
-              <input type="submit" name="submit" id="submit" value="Submit" />
-              <input type="reset" name="reset" id="reset" value="Reset" />
+              <fieldset id="btns">
+                <input type="submit" id="submit" value="Submit" />
+                <input type="reset" id="reset" value="Reset" />
+              </fieldset>
             </li>
             
           </ul>
@@ -140,27 +143,35 @@
       </main>
 
       <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
-      <footer class="footer-card" id="page2-footer-card">
+      <footer class="footer-card" id="page3-footer-card">
         <p class="biz-name">
         Cyclopes AI Consulting<br>
         </p>
+        
         <p class="contact">
           <button class="nav-btn" id="gh-btn">
             <a href="https://github.com/joshtype">GitHub</a>
           </button>
-          912-286-6548<br>
+          <br>
+          912-286-6548
+          <br>
           gregory_joshua2@students.columbusstate.edu
-      </p>
-      <small class="copyright">
-          &copy;2023 Joshua Gregory.<br>
-          Background images made using StarryAI.com.<br><br>
-      </small>
+       </p>
+        
+        <p class="copyright">
+          <small class="copyright">
+            &copy;2023 Joshua Gregory.<br>
+            Background images made using StarryAI.com.<br><br>
+          </small>
+        </p>
     </footer>
-  </div> <!-- close grid -->
 
-  <!-- JS SCRIPTS -->
-    <script src="script.js"></script>
+    <!-- close grid -->
+    </div>
+    <!-- js scripts -->
+    <script src="script2.js"></script>
     <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
       position="bottom-right"></script>
+    
   </body>
 </html>
