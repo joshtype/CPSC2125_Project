@@ -9,13 +9,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    
     <title>Page 3</title>
+    
     <link rel="icon" href="imgs/icons/icon.png" 
       type="image/icon type">
-    
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script2.js"></script>
   </head>
 
   <body id="page2-body">
@@ -72,72 +70,67 @@
       <main class="main-card" id="page2-main-card">
         
         <!-- form submit calls validation function; opens in new window -->
-        <form action="https://webdevbasics.net/scripts/yoga.php" id="p3-form" 
-          method="post" target="_blank">  
+        <form action="https://webdevbasics.net/scripts/yoga.php" 
+          id="p3-form" name="p3-form" target="_blank" method="post"
+            onsubmit="return formValidate()">  
           <ul id="form-ul">
-            Please fill out the form below to register (*required):
+            &emsp;Register below (*required):
             
-            <br><br>
-            <li class="form-li">
+
+            <br><br><li class="form-li">
               <fieldset id="basic-info">
-                <legend>Personal Information:</legend>
+                <legend>Personal Information</legend>
+
+                <br><label for="fname">First Name</label><br>
+                <input type="text" id="fname" minlength="1" maxlength="50" 
+                  placeholder="1 - 50 characters" />
                 
-                <br>
-                <label for="fname">First Name*</label><br>
-                <input type="text" id="fname" minlength="1" 
-                  maxlength="50" placeholder="1 - 50 characters" required />
-                
-                <br><br>
-                <label for="lname">Last Name*</label><br>
+                <br><br><label for="lname">Last Name</label><br>
                 <input type="text" id="lname" minlength="1" maxlength="50"
-                  placeholder="1 - 50 characters" required />
+                  placeholder="1 - 50 characters" />
                 
-                <br><br>
-                <label for="birthyear">Year of Birth*</label><br>
+                <br><br><label for="birthyear">Year of Birth</label><br>
                 <input type="birthyear" id="birthyear" min="1900" max="2023" 
-                  placeholder="yyyy" required />
+                  placeholder="yyyy" />
                 
-                <br><br> 
-                <label for="phone">Telephone*</label><br>
-                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="###-###-####" required />
+                <br><br><label for="phone">Telephone</label><br>
+                <input type="tel" id="phone" placeholder="###-###-####" 
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
+                <br><br><label for="mail">Email</label><br>
+                <input type="email" id="mail" placeholder="you@site.com" />
+                <p><!--spacer block --></p>
               </fieldset>
             </li>
 
-            <br><br>
-            <li class="form-li">
+            <br><br><li class="form-li">
               <fieldset id="account-info">
-                <legend>Account Information:</legend>
+                <legend>Account Information*</legend>
                 
-                <br>
-                <label for="mail">Email*</label><br>
-                <input type="email" id="mail" placeholder="you@site.com" required />
-                
-                <br><br>
-                <lable for="user-input">Username*</label><br>
-                <input type="text" id="user" minlength="5" maxlength="10"
-                  placeholder="5 - 10 chars" required />
+                <br><lable for="user">Username</label><br>
+                <input type="text" name="user" id="user" minlength="5" 
+                  maxlength="10" placeholder="5 - 10 chars" required 
+                    onclick="clearErr()" />
+                <p id="user-err"><!-- error msg here --></p>
                   
-                <br><br>
-                <label for="pass1">Password*</label><br>
+                <label for="pass1">Password</label><br>
                 <input type="password" id="pass1" placeholder="********" 
-                  required />
+                  required onclick="clearErr()" />
+                <p id="pass1-err"><!-- error msg here --></p>
                   
-                <br><br>
-                <label for="pass2">Confirm Password*</label><br>
+                <label for="pass2">Confirm Password</label><br>
                 <input type="password" id="pass2" placeholder="********"
-                  required />
+                  required onclick="clearErr()" />
+                <p id="pass2-err"><!-- error msg here --></p>
               </fieldset>
             </li>
             
-            <br><br>
-            <li class="form-li">
+            <br><li class="form-li">
               <fieldset id="btns">
                 <input type="submit" id="submit" value="Submit" />
                 <input type="reset" id="reset" value="Reset" />
               </fieldset>
             </li>
-            
           </ul>
         </form>
       </main>
@@ -149,19 +142,28 @@
         </p>
         
         <p class="contact">
-          <button class="nav-btn" id="gh-btn">
-            <a href="https://github.com/joshtype">GitHub</a>
+          <button class="contact-btn" id="gh-btn">
+            <a href="https://github.com/joshtype" class="contact-a">
+              GitHub
+            </a>
           </button>
-          <br>
-          912-286-6548
-          <br>
-          gregory_joshua2@students.columbusstate.edu
+          <button class="contact-btn" id="tele-btn">
+            <a href="tel: +19122866548" class="contact-a">
+              912-286-6548
+            </a>
+          </button>
+          <button class="contact-btn" id="mail-btn">
+            <a href="mailto: gregory_joshua2@students.columbusstate.edu"
+              class="contact-a">
+              Email
+            </a>
+          </button>
        </p>
         
         <p class="copyright">
           <small class="copyright">
-            &copy;2023 Joshua Gregory.<br>
-            Background images made using StarryAI.com.<br><br>
+            &copy;2023 Joshua Gregory.
+            Background images made using StarryAI.com.
           </small>
         </p>
     </footer>
@@ -169,7 +171,7 @@
     <!-- close grid -->
     </div>
     <!-- js scripts -->
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
     <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
       position="bottom-right"></script>
     

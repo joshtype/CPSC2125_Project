@@ -14,7 +14,7 @@ html {
 body {
   background-color: teal;
   background-image: url(imgs/cardboard-city.png);
-  background-size: 100%;
+  background-size: cover;
   background-position-y: center;
   background-repeat: no-repeat;
 }
@@ -43,23 +43,6 @@ main, footer { background-color: rgba(175, 238, 238, .4); }
 h2, h5, p, ol, ul, li { color: black; }
 h1 { color: white; padding: 1.5em; }
 
-/* GLOBAL: BUTTONS & LINKS */
-button:hover { background-color: salmon; }
-button { 
-  border: 1px solid black; 
-  border-radius: 15%;
-  padding-top: .25em; 
-  padding-bottom: .25em;
-}
-a { 
-  color: black; 
-  text-decoration: underline overline;
-}
-a:hover { 
-  color: turquoise; 
-  text-decoration-color: yellow;
-}
-
 /* GLOBAL: HEADER STYLES */
 .header-card {
   color: white;
@@ -70,7 +53,16 @@ a:hover {
 }
 
 /* GLOBAL: NAV TBL STYLES */
-td:hover { background-color: salmon; }
+/* GLOBAL: LINK STYLES */
+a { 
+  color: black; 
+  text-decoration: underline overline;
+}
+a:hover { 
+  color: darkturquoise; 
+  text-decoration-color: salmon;
+}
+td:hover { background-color: palegoldenrod; }
 .nav-tbl {
   border-collapse: collapse;
   background-color: rgba(175, 238, 238, .4);
@@ -86,6 +78,28 @@ table, th, td {
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
+  margin-right: 5em;
+}
+
+/* GLOBAL: FOOTER STYLES */
+.footer-card { margin-right: 5em; }
+.footer-card > * {
+  margin-left: 2em;
+}
+.contact-btn {
+  background-color: teal; 
+  color: white;
+  border: 1px solid black; 
+  width: auto;
+  height: 30px;
+}
+.contact-a {
+  color: white;
+  text-decoration: none;
+}
+.contact-a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* page1.html: LIST STYLES */
@@ -113,10 +127,23 @@ table, th, td {
   font-size: 1.5em;
   font-weight: 700;
 }
-#attribute-list > *, #element-list > * { color: salmon; }
-#left-col:hover, #right-col:hover { background-color: rgb(173, 255, 47); }
+#attribute-list > *, #element-list > * { 
+  color: salmon; 
+}
+#left-col:hover, #right-col:hover { 
+  background-color: rgb(173, 255, 47); 
+}
 
 /* page3.html Styles */
+fieldset { 
+  width: 300px; 
+  background-color: palegoldenrod; 
+}
+legend {
+  color: black;
+  border: 1px solid black;
+  background-color: palegoldenrod; 
+}
 .form-li { list-style: none; }
 #submit, #reset {
   color: white;
@@ -130,3 +157,4 @@ table, th, td {
   text-decoration: underline;
   cursor: pointer;
 }
+#user-err, #pass1-err, #pass2-err { color: red; }
