@@ -181,7 +181,7 @@ legend {
 }
 #user-err, #pass1-err, #pass2-err { color: red; }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* SCREENS 600px OR LESS */
 @media screen and (max-width: 600px) {
   html {
     height: 100%;
@@ -192,7 +192,6 @@ legend {
   }
   body {
     background-color: teal;
-    background-image: url(imgs/cardboard-city.png);
     background-size: 100%;
     background-position-y: center;
     background-repeat: no-repeat;
