@@ -30,43 +30,61 @@
       <nav class="nav-card" id="idx-nav">
         <center>
           <table class="nav-tbl" width=100% height=100%>
-            <!-- row 0 -->
-            <tr class="nav-tbl-row0">Menu</tr>
             <!-- row 1 -->
             <tr class="nav-tbl-row1">
               <td>
-                <center><a href="index.html">Home</a></center>
+                <center>
+                  <a href="index.html" tabindex="1">
+                    Home
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 2 -->
             <tr class="nav-tbl-row2">
               <td>
-                <center><a href="page1.html">Page 1</a></center>
+                <center>
+                  <a href="page1.html" tabindex="2">
+                    Page 1
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 3 -->
             <tr class="nav-tbl-row3">
               <td>
-                <center><a href="page2.html">Page 2</a></center>
+                <center>
+                  <a href="page2.html" tabindex="3">
+                    Page 2
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 4 -->
             <tr class="nav-tbl-row3">
               <td>
-                <center><a href="page3.html">Page 3</a></center>
+                <center>
+                  <a href="page3.html" tabindex="4">
+                    Page 3
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 5 -->
             <tr>
               <td>
-                <center><a href="https://www.columbusstate.edu">CSU</a></center>
+                <center>
+                  <a href="https://www.columbusstate.edu" tabindex="5">
+                    CSU 
+                  </a>
+                </center>
               </td>
             </tr>
          </table>
         </center>
       </nav>
 
-      <!-- MAIN CARD: MIDDLE ROW, RIGHT COL -->
+      <!-- MAIN CARD: MIDDLE ROW, MIDDLE COL -->
       <main class="main-card" id="page2-main-card">
         
         <!-- form submit calls validation function; opens in new window -->
@@ -76,29 +94,29 @@
           <ul id="form-ul">
             &emsp;Register below (*required):
             
-
             <br><br><li class="form-li">
               <fieldset id="basic-info">
                 <legend>Personal Information</legend>
 
                 <br><label for="fname">First Name</label><br>
                 <input type="text" id="fname" minlength="1" maxlength="50" 
-                  placeholder="1 - 50 characters" />
+                  placeholder="1 - 50 characters" tabindex="7" />
                 
                 <br><br><label for="lname">Last Name</label><br>
                 <input type="text" id="lname" minlength="1" maxlength="50"
-                  placeholder="1 - 50 characters" />
+                  placeholder="1 - 50 characters" tabindex="8" />
                 
                 <br><br><label for="birthyear">Year of Birth</label><br>
                 <input type="birthyear" id="birthyear" min="1900" max="2023" 
-                  placeholder="yyyy" />
+                  placeholder="yyyy" tabindex="9" />
                 
                 <br><br><label for="phone">Telephone</label><br>
                 <input type="tel" id="phone" placeholder="###-###-####" 
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" tabindex="10" />
 
                 <br><br><label for="mail">Email</label><br>
-                <input type="email" id="mail" placeholder="you@site.com" />
+                <input type="email" id="mail" placeholder="you@site.com" 
+                  tabindex="11" />
                 <p><!--spacer block --></p>
               </fieldset>
             </li>
@@ -110,30 +128,41 @@
                 <br><lable for="user">Username</label><br>
                 <input type="text" name="user" id="user" minlength="5" 
                   maxlength="10" placeholder="5 - 10 chars" required 
-                    onclick="clearErr()" />
+                    onclick="clearErr()" tabindex="12" />
                 <p id="user-err"><!-- error msg here --></p>
                   
                 <label for="pass1">Password</label><br>
                 <input type="password" id="pass1" placeholder="********" 
-                  required onclick="clearErr()" />
+                  required onclick="clearErr()" tabindex="13" />
                 <p id="pass1-err"><!-- error msg here --></p>
                   
                 <label for="pass2">Confirm Password</label><br>
                 <input type="password" id="pass2" placeholder="********"
-                  required onclick="clearErr()" />
+                  required onclick="clearErr()" tabindex="14" />
                 <p id="pass2-err"><!-- error msg here --></p>
               </fieldset>
             </li>
             
             <br><li class="form-li">
               <fieldset id="btns">
-                <input type="submit" id="submit" value="Submit" />
-                <input type="reset" id="reset" value="Reset" />
+                <input type="submit" id="submit" value="Submit" 
+                  tabindex="15" />
+                <input type="reset" id="reset" value="Reset" 
+                  tabindex="16" />
               </fieldset>
             </li>
           </ul>
         </form>
       </main>
+
+      <!-- ASIDE CARD: MIDDLE ROW, RIGHT COL -->
+      <aside class="aside-card" id="page3-aside-card">
+        <p>SVG Circle with a<br>Radius of 40 pixels:</p>
+        <svg width="100" height="100" id="page-2-aside-svg">
+          <circle cx="45" cy="50" r="40" stroke="red" stroke-width="2" 
+            fill="blue" />
+        </svg>
+      </aside>
 
       <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
       <footer class="footer-card" id="page3-footer-card">
@@ -143,37 +172,39 @@
         
         <p class="contact">
           <button class="contact-btn" id="gh-btn">
-            <a href="https://github.com/joshtype" class="contact-a">
+            <a href="https://github.com/joshtype" class="contact-a"
+              tabindex="17">
               GitHub
             </a>
           </button>
           <button class="contact-btn" id="tele-btn">
-            <a href="tel: +19122866548" class="contact-a">
+            <a href="tel: +19122866548" class="contact-a"
+              tabindex="18">
               912-286-6548
             </a>
           </button>
           <button class="contact-btn" id="mail-btn">
             <a href="mailto: gregory_joshua2@students.columbusstate.edu"
-              class="contact-a">
+              class="contact-a" tabindex="19">
               Email
             </a>
           </button>
        </p>
         
-        <p class="copyright">
-          <small class="copyright">
-            &copy;2023 Joshua Gregory.
-            Background images made using StarryAI.com.
-          </small>
-        </p>
+      <p class="copyright">
+        <small class="copyright">
+          &copy;2023 Joshua Gregory.
+          Background images made using StarryAI.com.
+        </small>
+      </p>
     </footer>
 
-    <!-- close grid -->
-    </div>
+    </div> <!-- close grid -->
     <!-- js scripts -->
     <script src="script.js"></script>
-    <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
-      position="bottom-right"></script>
+    <!-- replit script -->
+    <script src="https://replit.com/public/js/replit-badgev2.js" 
+      theme="dark" position="bottom-right"></script>
     
   </body>
 </html>

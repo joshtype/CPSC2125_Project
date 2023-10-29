@@ -10,6 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Index</title>
+    
+    <link rel="icon" href="imgs/icons/icon.png" 
+      type="image/icon type">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -27,79 +30,117 @@
       <nav class="nav-card" id="idx-nav">
         <center>
           <table class="nav-tbl" width=100% height=100%>
-            <!-- row 0 -->
-            <tr class="nav-tbl-row0">Menu</tr>
             <!-- row 1 -->
             <tr class="nav-tbl-row1">
               <td>
-                <center><a href="index.html">Home</a></center>
+                <center>
+                  <a href="index.html" tabindex="1">
+                    Home
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 2 -->
             <tr class="nav-tbl-row2">
               <td>
-                <center><a href="page1.html">Page 1</a></center>
+                <center>
+                  <a href="page1.html" tabindex="2">
+                    Page 1
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 3 -->
             <tr class="nav-tbl-row3">
               <td>
-                <center><a href="page2.html">Page 2</a></center>
+                <center>
+                  <a href="page2.html" tabindex="3">
+                    Page 2
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 4 -->
             <tr class="nav-tbl-row3">
               <td>
-                <center><a href="page3.html">Page 3</a></center>
+                <center>
+                  <a href="page3.html" tabindex="4">
+                    Page 3
+                  </a>
+                </center>
               </td>
             </tr>
             <!-- row 5 -->
             <tr>
               <td>
-                <center><a href="https://www.columbusstate.edu">CSU</a></center>
+                <center>
+                  <a href="https://www.columbusstate.edu" tabindex="5">
+                    CSU 
+                  </a>
+                </center>
               </td>
             </tr>
          </table>
         </center>
       </nav>
 
-      <!-- MAIN CARD: MIDDLE ROW, RIGHT COL -->
+      <!-- MAIN CARD: MIDDLE ROW, MIDDLE COL -->
       <main class="main-card" id="idx-main">
         <h2>Welcome!</h2>
-        <h5>My name is Joshua Gregory.</h5>
-        <p>Thank you for visiting my project site!</p>
+        <p>
+          My name is Joshua Gregory. Thank you for visiting my project
+          site!
+        </p>
       </main>
 
-      <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
-      <footer class="footer-card" id="idx-footer-card">
-        <p class="biz-name">
-        Cyclopes AI Consulting<br>
-        </p>
-        
-        <p class="contact">
-          <button class="nav-btn" id="gh-btn">
-            <a href="https://github.com/joshtype">GitHub</a>
-          </button>
-          <br>
-          912-286-6548
-          <br>
-          gregory_joshua2@students.columbusstate.edu
-       </p>
-        
-        <p class="copyright">
-          <small class="copyright">
-            &copy;2023 Joshua Gregory.<br>
-            Background images made using StarryAI.com.<br><br>
-          </small>
-        </p>
-    </footer>
+      <!-- ASIDE CARD: MIDDLE ROW, RIGHT COL -->
+      <aside class="aside-card" id="idx-aside-card">
+        <img src="imgs/homePage-resized.jpg" alt="In the foreground,
+          a globe-sized Earth sits in a desert. It is daytime and a 
+          long shadow extends behind the globe of Earth. Large sand
+          dunes rise in the background.">
+      </aside>
 
-    <!-- close grid -->
-    </div>
+      <!-- FOOTER CARD: BOTTOM ROW, ALL COLS -->
+        <footer class="footer-card" id="page3-footer-card">
+          <p class="biz-name">
+          Cyclopes AI Consulting<br>
+          </p>
+
+          <p class="contact">
+            <button class="contact-btn" id="gh-btn">
+              <a href="https://github.com/joshtype" class="contact-a"
+                tabindex="6">
+                GitHub
+              </a>
+            </button>
+            <button class="contact-btn" id="tele-btn">
+              <a href="tel: +19122866548" class="contact-a" tabindex="7">
+                912-286-6548
+              </a>
+            </button>
+            <button class="contact-btn" id="mail-btn">
+              <a href="mailto: gregory_joshua2@students.columbusstate.edu"
+                class="contact-a" tabindex="8">
+                Email
+              </a>
+            </button>
+         </p>
+
+          <p class="copyright">
+            <small class="copyright">
+              &copy;2023 Joshua Gregory.
+              Background images made using StarryAI.com.
+            </small>
+          </p>
+      </footer>
+
+    </div>  <!-- close grid -->
     <!-- js scripts -->
     <script src="script.js"></script>
-    <script src="https://replit.com/public/js/replit-badgev2.js" theme="dark" 
-      position="bottom-right"></script>
+    <!-- replit script -->
+    <script src="https://replit.com/public/js/replit-badgev2.js" 
+      theme="dark" position="bottom-right"></script>
     
   </body>
 </html>

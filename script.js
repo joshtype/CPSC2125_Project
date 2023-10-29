@@ -48,3 +48,17 @@ const formValidate = function() {
     return false;
   }
 };
+
+// page1.html canvas function 
+// Adapted from https://www.w3schools.com tutorial
+const draw = function() {
+    let canvas = document.getElementById("aside-canvas");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+};
+// execute function after body loads
+draw();
+
+

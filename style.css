@@ -14,25 +14,25 @@ html {
 body {
   background-color: teal;
   background-image: url(imgs/cardboard-city.png);
-  background-size: cover;
+  background-size: 100%;
   background-position-y: center;
   background-repeat: no-repeat;
 }
 
 /* GRID AREA NAMES */
-.header-card { grid-area: header; }
-.nav-card { grid-area: nav; }
-.main-card { grid-area: main; }
-.right-margin { grid-area: right; }
-.footer-card { grid-area: footer; }
+.header-card  { grid-area: head; }
+.nav-card     { grid-area: navi; }
+.main-card    { grid-area: main; }
+.aside-card   { grid-area: side; }
+.footer-card  { grid-area: foot; }
 
 /* GRID LAYOUT */
 .grid-container {
   display: grid;
   grid-template-areas: 
-    'header header header header header'
-    'nav main main main main'
-    'nav footer footer footer footer';
+    'head head head head head'
+    'navi main main main side'
+    'foot foot foot foot foot';
   column-gap: 1em;
   row-gap: 1em;
 }
@@ -52,7 +52,6 @@ h1 { color: white; padding: 1.5em; }
   background-position-y: 50%;
 }
 
-/* GLOBAL: NAV TBL STYLES */
 /* GLOBAL: LINK STYLES */
 a { 
   color: black; 
@@ -62,6 +61,8 @@ a:hover {
   color: darkturquoise; 
   text-decoration-color: salmon;
 }
+
+/* GLOBAL: NAV TBL STYLES */
 td:hover { background-color: palegoldenrod; }
 .nav-tbl {
   border-collapse: collapse;
@@ -78,11 +79,9 @@ table, th, td {
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  margin-right: 5em;
 }
 
 /* GLOBAL: FOOTER STYLES */
-.footer-card { margin-right: 5em; }
 .footer-card > * {
   margin-left: 2em;
 }
@@ -100,6 +99,29 @@ table, th, td {
 .contact-a:hover {
   color: white;
   text-decoration: underline;
+}
+
+/* ASIDE CARD STYLES */
+#idx-aside {
+  border: 1px solid white;
+  /* image resized to 300x375 px */
+  width: 300px;
+  height: 375px;
+}
+#page1-aside-card {
+  border: 1px solid white;
+}
+#page2-aside-card {
+  border: 1px solid white;
+}
+#page3-aside-card {
+  border: 1px solid white;
+}
+
+/* ASIDE CARD CHILDREN STYLES */
+#page2-aside-iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* page1.html: LIST STYLES */
@@ -128,13 +150,13 @@ table, th, td {
   font-weight: 700;
 }
 #attribute-list > *, #element-list > * { 
-  color: salmon; 
+  color: red; 
 }
 #left-col:hover, #right-col:hover { 
   background-color: rgb(173, 255, 47); 
 }
 
-/* page3.html Styles */
+/* page3.html WEB FORM STYLES */
 fieldset { 
   width: 300px; 
   background-color: palegoldenrod; 
@@ -158,3 +180,185 @@ legend {
   cursor: pointer;
 }
 #user-err, #pass1-err, #pass2-err { color: red; }
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: black;
+  }
+  body {
+    background-color: teal;
+    background-image: url(imgs/cardboard-city.png);
+    background-size: 100%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+
+  /* GRID AREA NAMES */
+  .header-card  { grid-area: head; }
+  .nav-card     { grid-area: navi; }
+  .main-card    { grid-area: main; }
+  .aside-card   { grid-area: side; }
+  .footer-card  { grid-area: foot; }
+
+  /* GRID LAYOUT */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'head'
+      'navi' 
+      'main'
+      'side'
+      'foot';
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+
+  /* GLOBAL: BORDERS, TEXT, BG-COLORS */
+  header, main, footer { border: 1px solid salmon; }
+  main, footer { background-color: rgba(175, 238, 238, .4); }
+  h2, h5, p, ol, ul, li { color: black; }
+  h1 { color: white; padding: 1.5em; }
+
+  /* GLOBAL: HEADER STYLES */
+  .header-card {
+    color: white;
+    background-image: url(imgs/greenwool.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+  }
+
+  /* GLOBAL: LINK STYLES */
+  a { 
+    color: black; 
+    text-decoration: underline overline;
+  }
+  a:hover { 
+    color: darkturquoise; 
+    text-decoration-color: salmon;
+  }
+
+  /* GLOBAL: NAV TBL STYLES */
+  td:hover { background-color: palegoldenrod; }
+  .nav-tbl {
+    border-collapse: collapse;
+    background-color: rgba(175, 238, 238, .4);
+  }
+  table, th, td {
+    border: 1px solid white;
+    padding: 1em;
+  }
+
+  /* GLOBAL: MAIN & NAV STYLES */
+  .main-card {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* GLOBAL: FOOTER STYLES */
+  .footer-card > * {
+    margin-left: 2em;
+  }
+  .contact-btn {
+    background-color: teal; 
+    color: white;
+    border: 1px solid black; 
+    width: auto;
+    height: 30px;
+  }
+  .contact-a {
+    color: white;
+    text-decoration: none;
+  }
+  .contact-a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* ASIDE CARD STYLES */
+  #idx-aside-card {
+    border: 1px solid white;
+    /* image resized to 300x375 px */
+    width: 300px;
+    height: 375px;
+  }
+  #page1-aside-card {
+    border: 1px solid white;
+  }
+  #page2-aside-card {
+    border: 1px solid white;
+  }
+  #page3-aside-card {
+    border: 1px solid white;
+  }
+
+  /* ASIDE CARD CHILDREN STYLES */
+  #page2-aside-iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* page1.html: LIST STYLES */
+  .li-topic {  
+    list-style-type: upper-roman;
+    background-color: rgb(173,255,47);
+  }
+  .li-items { 
+    background-color: rgb(152,251,152); 
+    list-style-type: lower-roman;
+  }
+
+  /* page2.html: TABLE STYLES */
+  .page2-table { font-family: serif; }
+  #page2-tbl-head {
+    background-color: black;
+    color: white;
+    font-family: serif;
+    font-size: 1.5em;
+  }
+  #col-cells, #col-titles {
+    background-color: rgb(173, 255, 47);
+    color: blue;
+    font-family: serif;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  #attribute-list > *, #element-list > * { 
+    color: red; 
+  }
+  #left-col:hover, #right-col:hover { 
+    background-color: rgb(173, 255, 47); 
+  }
+
+  /* page3.html WEB FORM STYLES */
+  fieldset { 
+    width: 300px; 
+    background-color: palegoldenrod; 
+  }
+  legend {
+    color: black;
+    border: 1px solid black;
+    background-color: palegoldenrod; 
+  }
+  .form-li { list-style: none; }
+  #submit, #reset {
+    color: white;
+    background-color: teal;
+    width: 75px;
+    height: 35px;
+  }
+  #submit:hover, #reset:hover {
+    color: white;
+    background-color: teal;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #user-err, #pass1-err, #pass2-err { color: red; }
+}
