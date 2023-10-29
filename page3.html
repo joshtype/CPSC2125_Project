@@ -100,23 +100,27 @@
 
                 <br><label for="fname">First Name</label><br>
                 <input type="text" id="fname" minlength="1" maxlength="50" 
-                  placeholder="1 - 50 characters" tabindex="7" />
+                  placeholder="1 - 50 characters" tabindex="7" 
+                  name="fname" />
                 
                 <br><br><label for="lname">Last Name</label><br>
                 <input type="text" id="lname" minlength="1" maxlength="50"
-                  placeholder="1 - 50 characters" tabindex="8" />
+                  placeholder="1 - 50 characters" tabindex="8" 
+                  name="fname" />
                 
                 <br><br><label for="birthyear">Year of Birth</label><br>
                 <input type="birthyear" id="birthyear" min="1900" max="2023" 
-                  placeholder="yyyy" tabindex="9" />
+                  placeholder="yyyy" tabindex="9" 
+                  name="birthyear" />
                 
                 <br><br><label for="phone">Telephone</label><br>
                 <input type="tel" id="phone" placeholder="###-###-####" 
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" tabindex="10" />
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" tabindex="10" 
+                  name="phone" />
 
                 <br><br><label for="mail">Email</label><br>
                 <input type="email" id="mail" placeholder="you@site.com" 
-                  tabindex="11" />
+                  tabindex="11" name="mail" />
                 <p><!--spacer block --></p>
               </fieldset>
             </li>
@@ -138,7 +142,8 @@
                   
                 <label for="pass2">Confirm Password</label><br>
                 <input type="password" id="pass2" placeholder="********"
-                  required onclick="clearErr()" tabindex="14" />
+                  required onclick="clearErr()" tabindex="14"
+                  name="pass2" />
                 <p id="pass2-err"><!-- error msg here --></p>
               </fieldset>
             </li>
