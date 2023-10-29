@@ -123,6 +123,9 @@ table, th, td {
   width: 100%;
   height: 100%;
 }
+#svg-desc {
+  color: white;
+}
 
 /* page1.html: LIST STYLES */
 .li-topic {  
@@ -304,7 +307,10 @@ legend {
     width: 100%;
     height: 100%;
   }
-
+  #svg-desc {
+    color: white;
+  }
+  
   /* page1.html: LIST STYLES */
   .li-topic {  
     list-style-type: upper-roman;
